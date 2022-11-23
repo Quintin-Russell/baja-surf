@@ -6,7 +6,6 @@
 </template>
 
 <script lang="ts">
-const GOOGLE_MAP_API_KEY = 'AIzaSyC9fgIeNyg1EfSqwkuwzL--2lmYhIQE8_Y'
 </script>
 
 <style>

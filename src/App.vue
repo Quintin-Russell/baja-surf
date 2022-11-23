@@ -6,10 +6,7 @@
 </template>
 
 <script lang="ts">
-import Map from './components/Map.vue'
-import Vue from 'vue'
-export default Vue.extend({
-})
+const GOOGLE_MAP_API_KEY = 'AIzaSyC9fgIeNyg1EfSqwkuwzL--2lmYhIQE8_Y'
 </script>
 
 <style>

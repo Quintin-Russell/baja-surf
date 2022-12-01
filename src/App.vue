@@ -1,12 +1,9 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-  </nav>
-  <router-view/>
+  <nav><router-link to="/">Home</router-link> |</nav>
+  <router-view />
 </template>
 
-<script lang="ts">
-</script>
+<script lang="ts"></script>
 
 <style>
 #app {

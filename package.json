@@ -4,15 +4,16 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.15.1",
     "bootstrap-vue": "^2.23.1",
     "core-js": "^3.8.3",
+    "dotenv": "^16.0.3",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
-    "vue2-google-maps": "^0.10.7",
     "vuex": "^4.0.0"
   },
   "devDependencies": {
@@ -22,6 +23,12 @@
     "@vue/cli-plugin-typescript": "~5.0.0",
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.4",
+    "prettier": "2.8.0",
     "typescript": "~4.5.5"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }

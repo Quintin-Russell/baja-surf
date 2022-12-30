@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <h1>The Surfer's Guide to <span>Baja</span></h1>
     <Map></Map>
   </div>
 </template>
@@ -15,3 +16,14 @@ export default defineComponent({
   },
 })
 </script>
+
+<style scoped>
+h1 {
+  font-family: "Yatra One", cursive;
+}
+
+h1 > span {
+  display: block;
+  font-family: "Ultra", serif;
+}
+</style>

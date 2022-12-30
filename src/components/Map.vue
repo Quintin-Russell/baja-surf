@@ -1,8 +1,5 @@
 <template>
-  <div>
-    <h1>Baja Surf</h1>
-    <div class="mapContainer" ref="mapDiv"></div>
-  </div>
+  <div class="mapContainer" ref="mapDiv"></div>
 </template>
 
 <script lang="ts">
@@ -45,8 +42,18 @@ export default {
 </script>
 
 <style>
+b,
+h4 {
+  font-family: "Yatra One", cursive;
+}
+
+.infoWindowTitle {
+  font-family: "Ultra", serif;
+}
+
 .mapContainer {
-  width: 100%;
-  height: 80vh;
+  width: 80%;
+  height: 90vh;
+  margin: auto;
 }
 </style>

@@ -1,7 +1,7 @@
 const makeContentHtml = (title: string, description: Marker["description"]) => {
   return `
     <section id="content-container">
-        <h1>${title}</h1>
+        <h1 class="infoWindowTitle">${title}</h1>
         <div class="row">
             <span> <b>Wave Type:</b> ${description.waveType}</span>
         </div>

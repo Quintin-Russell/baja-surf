@@ -5,8 +5,16 @@ declare global {
     isSupported: boolean
   }
   interface Marker {
-    position: LatLng
+    lat: number
+    lng: number
     title: string
+    description: {
+      waveType: string
+      waveQuality: number
+      waveSpeed: string
+      bottom: string
+      text: string
+    }
   }
 }
 

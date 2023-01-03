@@ -1,9 +1,18 @@
 <template>
-  <nav><router-link to="/">Home</router-link> |</nav>
+  <TopMenu></TopMenu>
+  <!-- <nav><router-link to="/">Home</router-link> |</nav> -->
   <router-view />
 </template>
 
-<script lang="ts"></script>
+<script lang="ts">
+import { defineComponent } from "vue"
+import TopMenu from "./components/TopMenu.vue"
+export default defineComponent({
+  components: {
+    TopMenu,
+  },
+})
+</script>
 
 <style>
 body {
@@ -21,18 +30,5 @@ body {
     rgba(210, 167, 124, 0.7) 20%,
     rgba(202, 152, 102, 0.5) 30%
   );
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
 }
 </style>

@@ -1,15 +1,13 @@
 <template>
-  <div>
-    <h1>Baja Surf</h1>
-    <div class="mapContainer" ref="mapDiv"></div>
-  </div>
+  <div class="mapContainer" ref="mapDiv"></div>
 </template>
 
 <script lang="ts">
 import { Loader } from "@googlemaps/js-api-loader"
 import { onMounted, ref } from "vue"
 import surfSpots from "../data/surfSpots"
-import makeMarker from "../helpers/makeMarker"
+import SurfSpot from "./classes/SurfSpot"
+// import makeMarker from "../helpers/makeMarker"
 
 //video: https://www.youtube.com/watch?v=m4ad3eEFhAo
 
@@ -26,7 +24,17 @@ export default {
           center: { lat: 27.8, lng: -113 },
           zoom: 5.5,
         })
-        surfSpots.forEach((spot) => makeMarker(map, spot))
+        surfSpots.forEach((spot) => {
+          if (!map) return
+          const newSpot = new SurfSpot(
+            spot.lat,
+            spot.lng,
+            spot.title,
+            spot.description,
+            map
+          )
+          newSpot.putMarkerOnMap()
+        })
       }
     })
     return { mapDiv }
@@ -35,8 +43,18 @@ export default {
 </script>
 
 <style>
+b,
+h4 {
+  font-family: "Yatra One", cursive;
+}
+
+.infoWindowTitle {
+  font-family: "Ultra", serif;
+}
+
 .mapContainer {
-  width: 100%;
-  height: 80vh;
+  width: 80%;
+  height: 90vh;
+  margin: auto;
 }
 </style>

@@ -19,9 +19,14 @@
       aria-labelledby="dropdownMenuButton1"
     >
       <li class="dropdown-item" v-for="route in $router.options.routes">
-        <router-link :to="route.path">{{
-          normalizeName(route.name)
-        }}</router-link>
+        <span>
+          <span class="icon">
+            <v-icon name="ri-cactus-fill"></v-icon>
+          </span>
+          <router-link :to="route.path">{{
+            normalizeName(route.name)
+          }}</router-link>
+        </span>
       </li>
     </ul>
   </div>
@@ -71,5 +76,9 @@ a {
   font-family: "Yatra One", cursive;
   text-decoration: none;
   color: #2c3e50;
+}
+
+span.icon {
+  padding: 0 0.4rem 0 0;
 }
 </style>

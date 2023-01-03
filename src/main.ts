@@ -5,11 +5,15 @@ import App from "./App.vue"
 import router from "./router"
 import store from "./store"
 import { OhVueIcon, addIcons } from "oh-vue-icons"
-import { BiMenuButtonWide, BiMenuButtonFill } from "oh-vue-icons/icons"
+import {
+  BiMenuButtonWide,
+  BiMenuButtonFill,
+  RiCactusFill,
+} from "oh-vue-icons/icons"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap"
 
-addIcons(BiMenuButtonWide, BiMenuButtonFill)
+addIcons(BiMenuButtonWide, BiMenuButtonFill, RiCactusFill)
 
 createApp(App)
   .component("v-icon", OhVueIcon)

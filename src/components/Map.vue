@@ -25,6 +25,7 @@ export default {
           zoom: 5.5,
         })
         surfSpots.forEach((spot) => {
+          if (!map) return
           const newSpot = new SurfSpot(
             spot.lat,
             spot.lng,

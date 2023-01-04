@@ -26,13 +26,7 @@ export default {
         })
         surfSpots.forEach((spot) => {
           if (!map) return
-          const newSpot = new SurfSpot(
-            spot.lat,
-            spot.lng,
-            spot.title,
-            spot.description,
-            map
-          )
+          const newSpot = new SurfSpot({ ...spot, map })
           newSpot.putMarkerOnMap()
         })
       }

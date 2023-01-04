@@ -7,17 +7,11 @@ class SurfSpot {
   description: Marker["description"]
   map: google.maps.Map
 
-  constructor(
-    lat: number,
-    lng: number,
-    title: string,
-    description: Marker["description"],
-    map: google.maps.Map
-  ) {
-    ;(this.position = { lat, lng }),
-      (this.title = title),
-      (this.description = description)
-    this.map = map
+  constructor(input: SurfSpotConstructor) {
+    ;(this.position = { lat: input.lat, lng: input.lng }),
+      (this.title = input.title),
+      (this.description = input.description)
+    this.map = input.map
   }
 
   putMarkerOnMap() {

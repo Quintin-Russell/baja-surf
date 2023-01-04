@@ -1,3 +1,5 @@
+import { LabelHTMLAttributes } from "vue"
+
 declare global {
   type CoordsObj = { lattitude: number; longitude: number }
   interface GeoLocation {
@@ -15,6 +17,15 @@ declare global {
       bottom: string
       text: string
     }
+  }
+  interface SurfSpotConstructor extends Marker {
+    map: google.maps.Map
+  }
+  interface RegionDataConstructor {
+    name: string
+    northBoundaryLat: number
+    southBoundaryLat: number
+    description: string
   }
 }
 

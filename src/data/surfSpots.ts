@@ -1,3 +1,5 @@
+import SurfSpot from "@/components/classes/SurfSpot"
+
 const surfSpots: Marker[] = [
   {
     lat: 32.417395,
